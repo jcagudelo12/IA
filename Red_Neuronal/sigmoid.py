@@ -1,12 +1,8 @@
-#Importar numpy para uso de matrices
-from math import exp
 import numpy as np
 
 def sigmoid(z):
-    row = z.size
-    g = np.zeros(row)
+    row = z.shape[0]
+    g = np.zeros((row, z.shape[1]))
     for i in range(row):
-        ed = np.exp(-z[i])
-        fil = 1/(1+ed)
-        g[i] = fil
+        g[i,0] = 1 / (1 + np.exp(-z[i]))      
     return g
