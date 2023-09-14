@@ -5,5 +5,6 @@ import numpy as np
 from sigmoid import sigmoid
 
 def sigmoidGradiente(z):
-    sig = np.multiply((sigmoid(z)),(1-sigmoid(z)))
+    g = sigmoid(z)
+    sig = np.multiply((g),(1 - g))
     return sig
