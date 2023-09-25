@@ -10,3 +10,4 @@ def sigmoid(z):
         fil = 1/(1+ed)
         g[i] = fil
     return g
+    # return 1.0 / (1.0 + np.exp(-z))
